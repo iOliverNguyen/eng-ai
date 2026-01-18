@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Precision-Recall Trade-Off</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="380" x2="700" y2="380" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="80" x2="100" y2="380" stroke="#333" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="400" y="415" text-anchor="middle" font-size="14" font-weight="bold">Recall (Sensitivity)</text>
+  <text x="55" y="230" text-anchor="middle" font-size="14" font-weight="bold" transform="rotate(-90 55 230)">Precision</text>
+
+  <!-- Tick marks and labels -->
+  <text x="100" y="400" text-anchor="middle" font-size="11">0.0</text>
+  <text x="250" y="400" text-anchor="middle" font-size="11">0.25</text>
+  <text x="400" y="400" text-anchor="middle" font-size="11">0.5</text>
+  <text x="550" y="400" text-anchor="middle" font-size="11">0.75</text>
+  <text x="700" y="400" text-anchor="middle" font-size="11">1.0</text>
+
+  <text x="85" y="385" text-anchor="end" font-size="11">0.0</text>
+  <text x="85" y="310" text-anchor="end" font-size="11">0.25</text>
+  <text x="85" y="235" text-anchor="end" font-size="11">0.5</text>
+  <text x="85" y="160" text-anchor="end" font-size="11">0.75</text>
+  <text x="85" y="85" text-anchor="end" font-size="11">1.0</text>
+
+  <!-- Precision-Recall Curve -->
+  <path d="M 100 95 Q 250 100 400 140 T 650 280 T 700 360"
+        stroke="#1976D2" stroke-width="4" fill="none"/>
+
+  <!-- Operating points -->
+  <!-- High precision, low recall -->
+  <circle cx="200" cy="105" r="8" fill="#4CAF50" stroke="white" stroke-width="2"/>
+  <text x="200" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#4CAF50">High Precision</text>
+  <text x="200" y="80" text-anchor="middle" font-size="10" fill="#555">(Conservative)</text>
+
+  <!-- Balanced -->
+  <circle cx="400" cy="140" r="8" fill="#FF9800" stroke="white" stroke-width="2"/>
+  <text x="400" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#FF9800">Balanced</text>
+
+  <!-- High recall, low precision -->
+  <circle cx="620" cy="265" r="8" fill="#F44336" stroke="white" stroke-width="2"/>
+  <text x="620" y="240" text-anchor="middle" font-size="11" font-weight="bold" fill="#F44336">High Recall</text>
+  <text x="620" y="255" text-anchor="middle" font-size="10" fill="#555">(Aggressive)</text>
+
+  <!-- Use case annotations -->
+  <rect x="50" y="430" width="300" height="15" fill="none"/>
+  <text x="55" y="442" font-size="11" fill="#4CAF50" font-weight="bold">Spam filter:</text>
+  <text x="140" y="442" font-size="10" fill="#555">High precision (avoid false positives)</text>
+
+  <rect x="450" y="430" width="300" height="15" fill="none"/>
+  <text x="455" y="442" font-size="11" fill="#F44336" font-weight="bold">Cancer detection:</text>
+  <text x="570" y="442" font-size="10" fill="#555">High recall (catch all cases)</text>
+
+  <!-- Arrows to show trade-off -->
+  <defs>
+    <marker id="arrowhead-eval" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#999"/>
+    </marker>
+  </defs>
+  <path d="M 300 180 Q 350 160 390 145" stroke="#999" stroke-width="2" fill="none" marker-end="url(#arrowhead-eval)" stroke-dasharray="4,2"/>
+  <text x="330" y="175" text-anchor="middle" font-size="10" fill="#999" font-style="italic">Lower threshold</text>
+  <text x="330" y="188" text-anchor="middle" font-size="10" fill="#999" font-style="italic">→ more recalls</text>
+</svg>

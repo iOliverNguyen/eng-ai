@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 550 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="140" y="25" font-size="14" font-family="monospace" font-weight="bold">Pretraining: Data Compression</text>
+
+  <!-- Data sources (left) -->
+  <text x="40" y="70" font-size="11" font-family="monospace" font-weight="bold">Training Data</text>
+  <text x="40" y="85" font-size="9" font-family="monospace" fill="gray">Trillions of tokens</text>
+
+  <rect x="40" y="100" width="100" height="25" fill="lightblue" stroke="black" stroke-width="1" rx="3"/>
+  <text x="50" y="116" font-size="9" font-family="monospace">Web Crawl</text>
+
+  <rect x="40" y="130" width="100" height="25" fill="lightblue" stroke="black" stroke-width="1" rx="3"/>
+  <text x="50" y="146" font-size="9" font-family="monospace">Wikipedia</text>
+
+  <rect x="40" y="160" width="100" height="25" fill="lightblue" stroke="black" stroke-width="1" rx="3"/>
+  <text x="50" y="176" font-size="9" font-family="monospace">Books</text>
+
+  <rect x="40" y="190" width="100" height="25" fill="lightblue" stroke="black" stroke-width="1" rx="3"/>
+  <text x="50" y="206" font-size="9" font-family="monospace">Code (GitHub)</text>
+
+  <rect x="40" y="220" width="100" height="25" fill="lightblue" stroke="black" stroke-width="1" rx="3"/>
+  <text x="50" y="236" font-size="9" font-family="monospace">Conversations</text>
+
+  <!-- Arrow to model -->
+  <line x1="150" y1="165" x2="220" y2="165" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="160" y="155" font-size="9" font-family="monospace" fill="gray">Compress</text>
+
+  <!-- Model (center) -->
+  <rect x="220" y="135" width="110" height="60" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="235" y="158" font-size="10" font-family="monospace">Transformer</text>
+  <text x="240" y="175" font-size="9" font-family="monospace">Billions of</text>
+  <text x="240" y="188" font-size="9" font-family="monospace">parameters</text>
+
+  <!-- Arrow to knowledge -->
+  <line x1="340" y1="165" x2="410" y2="165" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="350" y="155" font-size="9" font-family="monospace" fill="gray">Encodes</text>
+
+  <!-- Compressed knowledge (right) -->
+  <text x="410" y="70" font-size="11" font-family="monospace" font-weight="bold">Learned Patterns</text>
+  <text x="410" y="85" font-size="9" font-family="monospace" fill="gray">Compressed into weights</text>
+
+  <rect x="410" y="100" width="110" height="20" fill="lightyellow" stroke="black" stroke-width="1" rx="3"/>
+  <text x="415" y="114" font-size="8" font-family="monospace">Grammar &amp; syntax</text>
+
+  <rect x="410" y="125" width="110" height="20" fill="lightyellow" stroke="black" stroke-width="1" rx="3"/>
+  <text x="415" y="139" font-size="8" font-family="monospace">Factual knowledge</text>
+
+  <rect x="410" y="150" width="110" height="20" fill="lightyellow" stroke="black" stroke-width="1" rx="3"/>
+  <text x="415" y="164" font-size="8" font-family="monospace">Reasoning patterns</text>
+
+  <rect x="410" y="175" width="110" height="20" fill="lightyellow" stroke="black" stroke-width="1" rx="3"/>
+  <text x="415" y="189" font-size="8" font-family="monospace">Code syntax</text>
+
+  <rect x="410" y="200" width="110" height="20" fill="lightyellow" stroke="black" stroke-width="1" rx="3"/>
+  <text x="415" y="214" font-size="8" font-family="monospace">Domain conventions</text>
+
+  <rect x="410" y="225" width="110" height="20" fill="lightcoral" stroke="black" stroke-width="1" rx="3"/>
+  <text x="415" y="239" font-size="8" font-family="monospace">Biases &amp; errors</text>
+
+  <!-- Annotation -->
+  <text x="150" y="280" font-size="9" font-family="monospace" fill="gray">Pretraining compresses trillions of tokens</text>
+  <text x="150" y="295" font-size="9" font-family="monospace" fill="gray">into billions of parameters, encoding patterns</text>
+  <text x="150" y="310" font-size="9" font-family="monospace" fill="gray">including both useful knowledge and biases</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

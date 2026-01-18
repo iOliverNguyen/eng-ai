@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">The AGI Capability Gap</text>
+
+  <!-- Headers -->
+  <text x="200" y="70" font-size="15" font-weight="bold" text-anchor="middle" fill="#1e40af">Current AI</text>
+  <text x="600" y="70" font-size="15" font-weight="bold" text-anchor="middle" fill="#16a34a">AGI Requirements</text>
+
+  <!-- Dividing line -->
+  <line x1="400" y1="80" x2="400" y2="470" stroke="#999" stroke-width="2" stroke-dasharray="10,5"/>
+
+  <!-- Row 1: Transfer Learning -->
+  <text x="50" y="120" font-size="13" font-weight="bold" text-anchor="start" fill="#666">Transfer Learning</text>
+
+  <rect x="120" y="100" width="160" height="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="5"/>
+  <text x="200" y="125" font-size="11" text-anchor="middle" fill="#333">Within-domain only</text>
+
+  <rect x="520" y="100" width="160" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+  <text x="600" y="125" font-size="11" text-anchor="middle" fill="#333">Cross-domain transfer</text>
+
+  <!-- Row 2: Autonomy -->
+  <text x="50" y="180" font-size="13" font-weight="bold" text-anchor="start" fill="#666">Autonomy</text>
+
+  <rect x="120" y="160" width="160" height="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="5"/>
+  <text x="200" y="185" font-size="11" text-anchor="middle" fill="#333">Reactive (no goals)</text>
+
+  <rect x="520" y="160" width="160" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+  <text x="600" y="185" font-size="11" text-anchor="middle" fill="#333">Goal-setting, planning</text>
+
+  <!-- Row 3: World Modeling -->
+  <text x="50" y="240" font-size="13" font-weight="bold" text-anchor="start" fill="#666">World Modeling</text>
+
+  <rect x="120" y="220" width="160" height="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="5"/>
+  <text x="200" y="245" font-size="11" text-anchor="middle" fill="#333">Statistical patterns</text>
+
+  <rect x="520" y="220" width="160" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+  <text x="600" y="245" font-size="11" text-anchor="middle" fill="#333">Persistent 3D models</text>
+
+  <!-- Row 4: Causal Reasoning -->
+  <text x="50" y="300" font-size="13" font-weight="bold" text-anchor="start" fill="#666">Causal Reasoning</text>
+
+  <rect x="120" y="280" width="160" height="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="5"/>
+  <text x="200" y="305" font-size="11" text-anchor="middle" fill="#333">Correlation only</text>
+
+  <rect x="520" y="280" width="160" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+  <text x="600" y="305" font-size="11" text-anchor="middle" fill="#333">Understands causality</text>
+
+  <!-- Row 5: Continual Learning -->
+  <text x="50" y="360" font-size="13" font-weight="bold" text-anchor="start" fill="#666">Continual Learning</text>
+
+  <rect x="120" y="340" width="160" height="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="5"/>
+  <text x="200" y="365" font-size="11" text-anchor="middle" fill="#333">Frozen after training</text>
+
+  <rect x="520" y="340" width="160" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+  <text x="600" y="365" font-size="11" text-anchor="middle" fill="#333">Learns during inference</text>
+
+  <!-- Row 6: Grounding -->
+  <text x="50" y="420" font-size="13" font-weight="bold" text-anchor="start" fill="#666">Grounding</text>
+
+  <rect x="120" y="400" width="160" height="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="5"/>
+  <text x="200" y="425" font-size="11" text-anchor="middle" fill="#333">Text/image statistics</text>
+
+  <rect x="520" y="400" width="160" height="40" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="5"/>
+  <text x="600" y="425" font-size="11" text-anchor="middle" fill="#333">Embodied experience</text>
+
+  <!-- Bottom note -->
+  <text x="400" y="475" font-size="12" text-anchor="middle" fill="#666" font-style="italic">Gap: Not just scale, but fundamental architectural differences</text>
+</svg>

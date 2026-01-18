@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="130" y="25" font-size="14" font-family="monospace" font-weight="bold">Convolution Operation</text>
+
+  <!-- Input image (grid) -->
+  <text x="30" y="70" font-size="11" font-family="monospace">Input:</text>
+  <rect x="30" y="80" width="100" height="100" fill="lightblue" stroke="black" stroke-width="2"/>
+  <g id="input-grid">
+    <line x1="50" y1="80" x2="50" y2="180" stroke="gray" stroke-width="1"/>
+    <line x1="70" y1="80" x2="70" y2="180" stroke="gray" stroke-width="1"/>
+    <line x1="90" y1="80" x2="90" y2="180" stroke="gray" stroke-width="1"/>
+    <line x1="110" y1="80" x2="110" y2="180" stroke="gray" stroke-width="1"/>
+    <line x1="30" y1="100" x2="130" y2="100" stroke="gray" stroke-width="1"/>
+    <line x1="30" y1="120" x2="130" y2="120" stroke="gray" stroke-width="1"/>
+    <line x1="30" y1="140" x2="130" y2="140" stroke="gray" stroke-width="1"/>
+    <line x1="30" y1="160" x2="130" y2="160" stroke="gray" stroke-width="1"/>
+  </g>
+  <text x="45" y="200" font-size="9" font-family="monospace" fill="gray">W × H × C</text>
+
+  <!-- Filter -->
+  <text x="170" y="115" font-size="11" font-family="monospace">Filter:</text>
+  <rect x="170" y="125" width="40" height="40" fill="orange" stroke="black" stroke-width="2"/>
+  <text x="180" y="148" font-size="10" font-family="monospace">3×3</text>
+  <text x="175" y="180" font-size="9" font-family="monospace" fill="gray">Learned</text>
+
+  <!-- Arrow -->
+  <text x="230" y="150" font-size="20" font-family="monospace">⊛</text>
+  <text x="225" y="170" font-size="9" font-family="monospace" fill="gray">convolve</text>
+
+  <!-- Output feature map -->
+  <text x="280" y="70" font-size="11" font-family="monospace">Output:</text>
+  <rect x="280" y="80" width="90" height="90" fill="lightgreen" stroke="black" stroke-width="2"/>
+  <g id="output-grid">
+    <line x1="300" y1="80" x2="300" y2="170" stroke="gray" stroke-width="1"/>
+    <line x1="320" y1="80" x2="320" y2="170" stroke="gray" stroke-width="1"/>
+    <line x1="340" y1="80" x2="340" y2="170" stroke="gray" stroke-width="1"/>
+    <line x1="280" y1="100" x2="370" y2="100" stroke="gray" stroke-width="1"/>
+    <line x1="280" y1="120" x2="370" y2="120" stroke="gray" stroke-width="1"/>
+    <line x1="280" y1="140" x2="370" y2="140" stroke="gray" stroke-width="1"/>
+  </g>
+  <text x="285" y="190" font-size="9" font-family="monospace" fill="gray">Feature map</text>
+
+  <!-- Sliding illustration -->
+  <text x="50" y="240" font-size="12" font-family="monospace" font-weight="bold">Filter slides across image:</text>
+
+  <!-- Small sliding demo -->
+  <rect x="50" y="255" width="60" height="60" fill="none" stroke="lightgray" stroke-width="1"/>
+  <rect x="50" y="255" width="20" height="20" fill="orange" opacity="0.5"/>
+  <text x="55" y="335" font-size="9" font-family="monospace">Position 1</text>
+
+  <rect x="140" y="255" width="60" height="60" fill="none" stroke="lightgray" stroke-width="1"/>
+  <rect x="150" y="255" width="20" height="20" fill="orange" opacity="0.5"/>
+  <text x="145" y="335" font-size="9" font-family="monospace">Position 2</text>
+
+  <rect x="230" y="255" width="60" height="60" fill="none" stroke="lightgray" stroke-width="1"/>
+  <rect x="250" y="265" width="20" height="20" fill="orange" opacity="0.5"/>
+  <text x="240" y="335" font-size="9" font-family="monospace">Position N</text>
+
+  <text x="320" y="285" font-size="10" font-family="monospace">→ Feature map</text>
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="180" y="25" font-size="14" font-family="monospace" font-weight="bold">Three-Stage Training</text>
+
+  <!-- Stage 1: Pretraining -->
+  <rect x="40" y="60" width="150" height="70" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="65" y="80" font-size="11" font-family="monospace" font-weight="bold">Stage 1: Pretraining</text>
+  <text x="50" y="100" font-size="9" font-family="monospace">Data: Internet text</text>
+  <text x="50" y="115" font-size="9" font-family="monospace">Objective: Next token</text>
+  <text x="50" y="127" font-size="8" font-family="monospace" fill="gray">→ Knowledge</text>
+
+  <!-- Arrow -->
+  <line x1="200" y1="95" x2="230" y2="95" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2: SFT -->
+  <rect x="230" y="60" width="150" height="70" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="265" y="80" font-size="11" font-family="monospace" font-weight="bold">Stage 2: SFT</text>
+  <text x="240" y="100" font-size="9" font-family="monospace">Data: Instructions</text>
+  <text x="240" y="115" font-size="9" font-family="monospace">Objective: Match demos</text>
+  <text x="240" y="127" font-size="8" font-family="monospace" fill="gray">→ Format</text>
+
+  <!-- Arrow -->
+  <line x1="390" y1="95" x2="420" y2="95" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3: RLHF -->
+  <rect x="420" y="60" width="150" height="70" fill="lightyellow" stroke="black" stroke-width="2" rx="5"/>
+  <text x="450" y="80" font-size="11" font-family="monospace" font-weight="bold">Stage 3: RLHF</text>
+  <text x="430" y="100" font-size="9" font-family="monospace">Data: Preferences</text>
+  <text x="430" y="115" font-size="9" font-family="monospace">Objective: Max reward</text>
+  <text x="430" y="127" font-size="8" font-family="monospace" fill="gray">→ Alignment</text>
+
+  <!-- Final result -->
+  <line x1="300" y1="140" x2="300" y2="170" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="180" y="180" width="240" height="50" fill="lavender" stroke="black" stroke-width="2" rx="5"/>
+  <text x="230" y="203" font-size="11" font-family="monospace" font-weight="bold">Aligned Assistant</text>
+  <text x="190" y="220" font-size="9" font-family="monospace">Knowledgeable + Helpful + Safe</text>
+
+  <!-- Annotations -->
+  <text x="100" y="250" font-size="9" font-family="monospace" fill="gray">Each stage builds on the previous, adding capability</text>
+  <text x="100" y="265" font-size="9" font-family="monospace" fill="gray">and refining behavior toward human preferences</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

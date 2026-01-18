@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace;
+  --font-serif: 'Charter', 'Georgia', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.book-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr 200px;
+  gap: 2rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.chapter-content {
+  position: relative;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1200px) {
+  .book-layout {
+    grid-template-columns: 280px 1fr;
+  }
+
+  .chapter-toc {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .book-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+  }
+}
+
+/* SVG diagrams */
+.chapter svg,
+.chapter img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+
+article p image {
+  max-width: 100% !important;
+}
+
+/* Print styles for individual chapters */
+@media print {
+  .sidebar,
+  .chapter-toc,
+  .toolbar-actions,
+  .breadcrumbs,
+  .chapter-navigation {
+    display: none !important;
+  }
+
+  .book-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-content {
+    max-width: none;
+  }
+}

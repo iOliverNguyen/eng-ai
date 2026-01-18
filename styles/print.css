@@ -1,0 +1,632 @@
+/* ===== PRINT-SPECIFIC STYLES ===== */
+
+/* Font Stack - Professional Serif for Print */
+.print-view {
+  font-family: 'Charter', 'Georgia', 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+  font-size: 11pt;
+  line-height: 1.45;
+  color: #000;
+  background: #fff;
+}
+
+/* ===== TITLE PAGE ===== */
+.title-page {
+  page-break-after: always;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.title-page h1 {
+  margin-bottom: 1in;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.title-page h1 .title-primary {
+  display: block;
+  font-size: 48pt;
+  font-weight: 700;
+  margin-bottom: 0.25in;
+}
+
+.title-page h1 .title-secondary {
+  display: block;
+  font-size: 20pt;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.3;
+}
+
+.title-page .subtitle {
+  font-size: 16pt;
+  line-height: 1.5;
+  max-width: 10in;
+  margin-bottom: 2in;
+  font-style: italic;
+}
+
+.title-page .metadata {
+  font-size: 11pt;
+  color: #666;
+}
+
+.title-page .metadata p {
+  margin: 6pt 0;
+}
+
+/* ===== COPYRIGHT PAGE ===== */
+.copyright-page {
+  page-break-after: always;
+  padding: 2in 1.5in;
+  font-size: 10pt;
+  line-height: 1.6;
+}
+
+.copyright-page p {
+  margin: 6pt 0;
+}
+
+.copyright-page .copyright {
+  font-weight: 600;
+  margin-bottom: 12pt;
+}
+
+.copyright-page .notice {
+  margin-top: 18pt;
+  font-style: italic;
+  color: #666;
+}
+
+/* ===== TABLE OF CONTENTS ===== */
+.toc-intro {
+  margin-bottom: 12pt;
+}
+
+.toc-page {
+  page-break-after: always;
+  padding: 1in 1.25in;
+}
+
+.toc-page h2 {
+  font-size: 24pt;
+  margin-bottom: 24pt;
+  text-align: center;
+  font-weight: 700;
+}
+
+.toc-part {
+  margin-bottom: 18pt;
+}
+
+.toc-part-title {
+  font-size: 12pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6pt;
+  color: #333;
+}
+
+.toc-part-title a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.toc-part-title a:hover {
+  color: #0066cc;
+}
+
+.toc-part ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-part li {
+  margin: 4pt 0;
+  font-size: 10.5pt;
+  line-height: 1.4;
+}
+
+.toc-intro a,
+.toc-part li a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  transition: color 0.2s;
+}
+
+.toc-intro a:hover,
+.toc-part li a:hover {
+  color: #0066cc;
+}
+
+.toc-part .chapter-num {
+  flex-shrink: 0;
+  width: 2em;
+  font-weight: 600;
+}
+
+.toc-part .chapter-title {
+  flex: 1;
+}
+
+/* ===== PART DIVIDERS ===== */
+.part-divider {
+  page-break-before: always;
+  page-break-after: always;
+  min-height: 8in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.part-divider-title {
+  font-size: 36pt;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.2;
+}
+
+/* ===== PDF BOOKMARKS (Paged.js CLI) ===== */
+
+/* Book title - Level 1 */
+.title-page h1 {
+  bookmark-label: "Engineering Intelligence";
+  bookmark-level: 1;
+  bookmark-state: open;
+}
+
+/* Part titles - no longer using h1, so no bookmark needed */
+
+/* Chapter titles - Level 2 */
+.chapter-print h1 {
+  bookmark-level: 2;
+  bookmark-state: closed;
+}
+
+/* Section headings in chapters - Level 3 */
+.chapter-print h2 {
+  bookmark-level: 3;
+  bookmark-state: closed;
+}
+
+/* ===== CHAPTER STYLING ===== */
+.chapter-print {
+  page-break-before: always;
+  margin-bottom: 0;
+}
+
+.chapter-print h1,
+.chapter h1 {
+  font-size: 24pt;
+  font-weight: 700;
+  margin-bottom: 36pt;
+  margin-top: 72pt;
+  page-break-after: avoid;
+  line-height: 1.2;
+  word-break: normal;
+  hyphens: none;
+}
+
+.chapter-print h2,
+.chapter h2 {
+  font-size: 16pt;
+  font-weight: 600;
+  margin-top: 24pt;
+  margin-bottom: 12pt;
+  page-break-after: avoid;
+  line-height: 1.3;
+  word-break: normal;
+  hyphens: none;
+}
+
+.chapter-print h3,
+.chapter h3 {
+  font-size: 13pt;
+  font-weight: 600;
+  margin-top: 18pt;
+  margin-bottom: 9pt;
+  page-break-after: avoid;
+  word-break: normal;
+  hyphens: none;
+}
+
+.chapter-print p,
+.chapter p {
+  margin: 9pt 0;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  orphans: 3;
+  widows: 3;
+}
+
+.chapter-print p {
+  text-align: justify;
+}
+
+@media print {
+  .chapter p {
+    text-align: justify;
+  }
+}
+
+/* ===== ENGINEERING TAKEAWAY SECTIONS ===== */
+.chapter-print h2[id*="engineering-takeaway"],
+.chapter h2[id*="engineering-takeaway"] {
+  border-top: 2pt solid #333;
+  padding-top: 18pt;
+  margin-top: 36pt;
+}
+
+/* ===== REFERENCES SECTION ===== */
+.chapter-print h2[id*="references"],
+.chapter h2[id*="references"] {
+  border-top: 1pt solid #999;
+  padding-top: 18pt;
+  margin-top: 36pt;
+  page-break-before: avoid;
+}
+
+.chapter-print h2[id*="references"] + p,
+.chapter h2[id*="references"] + p {
+  margin-top: 12pt;
+}
+
+.chapter-print h2[id*="references"] ~ p a,
+.chapter h2[id*="references"] ~ p a {
+  word-wrap: break-word;
+}
+
+.chapter-print h2[id*="references"] ~ p a[href^="http"]:after,
+.chapter h2[id*="references"] ~ p a[href^="http"]:after {
+  content: "";
+}
+
+/* ===== CODE BLOCKS ===== */
+.chapter-print pre,
+.chapter pre {
+  font-size: 8.5pt;
+  line-height: 1.35;
+  padding: 9pt;
+  margin: 12pt 0;
+  border: 0.5pt solid #ccc;
+  background: #f8f8f8 !important;
+  page-break-inside: avoid;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.chapter-print code,
+.chapter code {
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 0.9em;
+  background: #f0f0f0;
+  padding: 1pt 3pt;
+}
+
+.chapter-print pre code,
+.chapter pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ===== LISTS ===== */
+.chapter-print ul,
+.chapter-print ol,
+.chapter ul,
+.chapter ol {
+  margin: 12pt 0;
+  padding-left: 24pt;
+}
+
+.chapter-print li,
+.chapter li {
+  margin: 6pt 0;
+  orphans: 2;
+  widows: 2;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* ===== MATH ===== */
+.chapter-print .katex-display,
+.chapter .katex-display {
+  margin: 18pt 0;
+  page-break-inside: avoid;
+  font-size: 11pt;
+}
+
+.chapter-print .katex,
+.chapter .katex {
+  font-size: 1em;
+}
+
+/* ===== SVG DIAGRAMS ===== */
+.chapter-print svg,
+.chapter svg {
+  max-width: 100%;
+  height: auto;
+  margin: 18pt auto;
+  display: block;
+  page-break-inside: avoid;
+}
+
+/* ===== LINKS ===== */
+.chapter-print a,
+.chapter a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 0.5pt solid #666;
+}
+
+.chapter-print i a,
+.chapter i a {
+  border-bottom: none;
+}
+
+/* Print URLs for external links */
+.chapter-print a[href^="http"]:after,
+.chapter a[href^="http"]:after {
+  /*content: " (" attr(href) ")";*/
+  font-size: 8pt;
+  color: #666;
+  word-wrap: break-word;
+}
+
+/* ===== BLOCKQUOTES ===== */
+.chapter-print blockquote,
+.chapter blockquote {
+  border-left: 2pt solid #333;
+  padding-left: 12pt;
+  margin: 12pt 0;
+  font-style: italic;
+  page-break-inside: avoid;
+}
+
+/* ===== TABLES ===== */
+.chapter-print table,
+.chapter table {
+  font-size: 10pt;
+  width: 100%;
+  margin: 12pt 0;
+  border-collapse: collapse;
+  page-break-inside: avoid;
+}
+
+.chapter-print th,
+.chapter-print td,
+.chapter th,
+.chapter td {
+  padding: 6pt;
+  border: 0.5pt solid #999;
+  text-align: left;
+}
+
+.chapter-print th,
+.chapter th {
+  background: #f0f0f0;
+  font-weight: 600;
+}
+
+/* ===== HORIZONTAL RULES ===== */
+.chapter-print hr,
+.chapter hr {
+  margin: 24pt 0;
+  border: none;
+  border-top: 0.5pt solid #999;
+}
+
+/* Hide hr before headers */
+.chapter hr:has(+ h1),
+.chapter hr:has(+ h2),
+.chapter hr:has(+ h3),
+.chapter hr:has(+ h4),
+.chapter-print hr:has(+ h1),
+.chapter-print hr:has(+ h2),
+.chapter-print hr:has(+ h3),
+.chapter-print hr:has(+ h4) {
+  display: none !important;
+}
+
+.chapter-print p img,
+.chapter p img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== PRINT MEDIA QUERIES ===== */
+@media print {
+  /* Page setup */
+  @page {
+    size: B5;  /* 176mm × 250mm */
+    margin: 18mm 12mm 16mm 12mm;  /* Slightly adjusted for B5 proportions */
+
+    /* Page numbers in bottom center (Paged.js) */
+    @bottom-center {
+      content: counter(page);
+      font-size: 9pt;
+      color: #666;
+    }
+  }
+
+  /* No page number on title page */
+  @page :first {
+    @bottom-center {
+      content: "";
+    }
+    margin: 0;  /* Title page needs no margins */
+  }
+
+  /* Better running headers for left/right pages (Paged.js) */
+  @page :left {
+    @top-left {
+      content: "Engineering Intelligence";
+      font-size: 9pt;
+      font-style: italic;
+      color: #666;
+    }
+    @top-right {
+      content: counter(page);
+      font-size: 9pt;
+    }
+  }
+
+  @page :right {
+    @top-right {
+      content: string(chapter-title);
+      font-size: 9pt;
+      font-style: italic;
+      color: #666;
+    }
+    @top-left {
+      content: counter(page);
+      font-size: 9pt;
+    }
+  }
+
+  /* Removed @page :first to ensure consistent margins across all pages */
+  /* Body */
+  body {
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Remove screen-only styles */
+  .print-view {
+    max-width: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  /* Title page */
+  .title-page {
+    page-break-after: always;
+  }
+
+  /* Copyright page (show in print) */
+  .copyright-page {
+    display: block !important;
+    page-break-after: always;
+  }
+
+  /* TOC */
+  .toc-page {
+    page-break-after: always;
+  }
+
+  /* Part dividers */
+  .part-divider {
+    page-break-before: always;
+    page-break-after: always;
+    margin: 0;
+  }
+
+  /* Chapters */
+  .chapter-print {
+    page-break-before: always;
+    margin: 0;
+  }
+
+  .chapter {
+    margin: 0;
+  }
+
+  .chapter-print h1 {
+    page-break-before: always;
+    page-break-after: avoid;
+  }
+
+  .chapter h1 {
+    page-break-after: avoid;
+  }
+
+  .chapter-print h2,
+  .chapter-print h3,
+  .chapter h2,
+  .chapter h3 {
+    page-break-after: avoid;
+  }
+
+  .chapter-print p,
+  .chapter p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Code blocks */
+  .chapter-print pre,
+  .chapter pre {
+    page-break-inside: avoid;
+  }
+
+  /* SVG diagrams */
+  .chapter-print svg,
+  .chapter svg {
+    page-break-inside: avoid;
+  }
+
+  /* Math */
+  .chapter-print .katex-display,
+  .chapter .katex-display {
+    page-break-inside: avoid;
+  }
+
+  /* Links - print URLs */
+  .chapter-print a[href^="http"]:after,
+  .chapter a[href^="http"]:after {
+    /*content: " (" attr(href) ")";*/
+  }
+
+  /* Don't print URLs in references section */
+  .chapter-print h2[id*="references"] ~ p a[href^="http"]:after,
+  .chapter h2[id*="references"] ~ p a[href^="http"]:after {
+    content: "";
+  }
+}
+
+/* ===== RUNNING HEADERS (Limited Browser Support) ===== */
+@page :left {
+  @top-left {
+    content: "Engineering Intelligence";
+    font-size: 9pt;
+    font-style: italic;
+  }
+}
+
+@page :right {
+  @top-right {
+    content: string(chapter-title);
+    font-size: 9pt;
+    font-style: italic;
+  }
+}
+
+/* Set chapter title for running header */
+.chapter-print h1,
+.chapter h1 {
+  string-set: chapter-title content();
+}
+
+/* ===== OPTIONAL: DROP CAPS ===== */
+/* Uncomment to enable drop caps for first paragraph of each chapter */
+/*
+.chapter-print h1 + h2 + p::first-letter,
+.chapter-print h1 + p::first-letter {
+  font-size: 3.5em;
+  line-height: 0.9;
+  float: left;
+  margin: 0.05em 0.1em 0 0;
+  font-weight: 700;
+}
+*/

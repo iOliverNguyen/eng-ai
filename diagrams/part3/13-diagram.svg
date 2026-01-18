@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="150" y="25" font-size="14" font-family="monospace" font-weight="bold">Backpropagation Flow</text>
+
+  <!-- Forward pass (top) -->
+  <text x="30" y="70" font-size="12" font-family="monospace" font-weight="bold">Forward Pass:</text>
+
+  <rect x="80" y="50" width="50" height="40" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="92" y="75" font-size="10" font-family="monospace">Input</text>
+
+  <line x1="130" y1="70" x2="170" y2="70" stroke="black" stroke-width="2" marker-end="url(#arrowblack)"/>
+
+  <rect x="170" y="50" width="60" height="40" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="180" y="75" font-size="10" font-family="monospace">Layer 1</text>
+
+  <line x1="230" y1="70" x2="270" y2="70" stroke="black" stroke-width="2" marker-end="url(#arrowblack)"/>
+
+  <rect x="270" y="50" width="60" height="40" fill="khaki" stroke="black" stroke-width="2" rx="5"/>
+  <text x="280" y="75" font-size="10" font-family="monospace">Layer 2</text>
+
+  <line x1="330" y1="70" x2="370" y2="70" stroke="black" stroke-width="2" marker-end="url(#arrowblack)"/>
+
+  <rect x="370" y="50" width="60" height="40" fill="lightcoral" stroke="black" stroke-width="2" rx="5"/>
+  <text x="383" y="75" font-size="10" font-family="monospace">Output</text>
+
+  <!-- Backward pass (bottom) -->
+  <text x="30" y="180" font-size="12" font-family="monospace" font-weight="bold">Backward Pass:</text>
+
+  <rect x="80" y="230" width="50" height="40" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="85" y="250" font-size="9" font-family="monospace">∂L/∂x</text>
+
+  <line x1="170" y1="250" x2="130" y2="250" stroke="red" stroke-width="2" marker-end="url(#arrowred)"/>
+
+  <rect x="170" y="230" width="60" height="40" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="175" y="250" font-size="9" font-family="monospace">∂L/∂W¹</text>
+
+  <line x1="270" y1="250" x2="230" y2="250" stroke="red" stroke-width="2" marker-end="url(#arrowred)"/>
+
+  <rect x="270" y="230" width="60" height="40" fill="khaki" stroke="black" stroke-width="2" rx="5"/>
+  <text x="275" y="250" font-size="9" font-family="monospace">∂L/∂W²</text>
+
+  <line x1="370" y1="250" x2="330" y2="250" stroke="red" stroke-width="2" marker-end="url(#arrowred)"/>
+
+  <rect x="370" y="230" width="60" height="40" fill="lightcoral" stroke="black" stroke-width="2" rx="5"/>
+  <text x="380" y="245" font-size="9" font-family="monospace">Loss L</text>
+  <text x="375" y="260" font-size="9" font-family="monospace">∂L/∂ŷ</text>
+
+  <!-- Labels -->
+  <text x="140" y="140" font-size="11" font-family="monospace" fill="gray">Data flows forward →</text>
+  <text x="140" y="210" font-size="11" font-family="monospace" fill="red">Gradients flow backward ←</text>
+
+  <text x="100" y="300" font-size="10" font-family="monospace" fill="gray">Each layer computes gradients</text>
+  <text x="100" y="312" font-size="10" font-family="monospace" fill="gray">for its weights using chain rule</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowblack" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="red"/>
+    </marker>
+  </defs>
+</svg>

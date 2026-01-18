@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Data Pipeline with Feedback Loop</text>
+
+  <!-- Collection -->
+  <rect x="50" y="80" width="150" height="70" fill="#BBDEFB" stroke="#1565C0" stroke-width="2" rx="5"/>
+  <text x="125" y="110" text-anchor="middle" font-size="14" font-weight="bold">Collection</text>
+  <text x="125" y="130" text-anchor="middle" font-size="11" fill="#555">User interactions,</text>
+  <text x="125" y="145" text-anchor="middle" font-size="11" fill="#555">logs, sensors</text>
+
+  <!-- Cleaning & Labeling -->
+  <rect x="250" y="80" width="150" height="70" fill="#C8E6C9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="325" y="110" text-anchor="middle" font-size="14" font-weight="bold">Cleaning</text>
+  <text x="325" y="130" text-anchor="middle" font-size="11" fill="#555">Remove duplicates,</text>
+  <text x="325" y="145" text-anchor="middle" font-size="11" fill="#555">handle missing data</text>
+
+  <!-- Training -->
+  <rect x="450" y="80" width="150" height="70" fill="#FFF9C4" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="525" y="110" text-anchor="middle" font-size="14" font-weight="bold">Training</text>
+  <text x="525" y="130" text-anchor="middle" font-size="11" fill="#555">Model learns from</text>
+  <text x="525" y="145" text-anchor="middle" font-size="11" fill="#555">processed data</text>
+
+  <!-- Model Deployment -->
+  <rect x="450" y="230" width="150" height="70" fill="#FFCCBC" stroke="#D84315" stroke-width="2" rx="5"/>
+  <text x="525" y="260" text-anchor="middle" font-size="14" font-weight="bold">Deployment</text>
+  <text x="525" y="280" text-anchor="middle" font-size="11" fill="#555">Model makes</text>
+  <text x="525" y="295" text-anchor="middle" font-size="11" fill="#555">predictions</text>
+
+  <!-- User Interaction with Predictions -->
+  <rect x="250" y="230" width="150" height="70" fill="#E1BEE7" stroke="#7B1FA2" stroke-width="2" rx="5"/>
+  <text x="325" y="260" text-anchor="middle" font-size="14" font-weight="bold">User Reaction</text>
+  <text x="325" y="280" text-anchor="middle" font-size="11" fill="#555">Clicks, purchases,</text>
+  <text x="325" y="295" text-anchor="middle" font-size="11" fill="#555">engagement</text>
+
+  <!-- Feedback Loop Back to Collection -->
+  <rect x="50" y="230" width="150" height="70" fill="#FFCDD2" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="125" y="260" text-anchor="middle" font-size="14" font-weight="bold">New Data</text>
+  <text x="125" y="280" text-anchor="middle" font-size="11" fill="#555">Model-influenced</text>
+  <text x="125" y="295" text-anchor="middle" font-size="11" fill="#555">interactions</text>
+
+  <!-- Drift Monitoring -->
+  <rect x="325" y="380" width="150" height="60" fill="#C5CAE9" stroke="#3949AB" stroke-width="2" rx="5"/>
+  <text x="400" y="405" text-anchor="middle" font-size="13" font-weight="bold">Drift Monitoring</text>
+  <text x="400" y="425" text-anchor="middle" font-size="10" fill="#555">Detect distribution changes</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead-pipe" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+    <marker id="arrowhead-feedback" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#C62828"/>
+    </marker>
+  </defs>
+
+  <!-- Forward flow -->
+  <line x1="200" y1="115" x2="245" y2="115" stroke="#666" stroke-width="2" marker-end="url(#arrowhead-pipe)"/>
+  <line x1="400" y1="115" x2="445" y2="115" stroke="#666" stroke-width="2" marker-end="url(#arrowhead-pipe)"/>
+  <line x1="525" y1="150" x2="525" y2="225" stroke="#666" stroke-width="2" marker-end="url(#arrowhead-pipe)"/>
+  <line x1="450" y1="265" x2="405" y2="265" stroke="#666" stroke-width="2" marker-end="url(#arrowhead-pipe)"/>
+  <line x1="250" y1="265" x2="205" y2="265" stroke="#666" stroke-width="2" marker-end="url(#arrowhead-pipe)"/>
+
+  <!-- Feedback loop (red) -->
+  <path d="M 125 230 L 125 155" stroke="#C62828" stroke-width="3" marker-end="url(#arrowhead-feedback)"/>
+  <text x="145" y="190" text-anchor="start" font-size="12" fill="#C62828" font-weight="bold">Feedback</text>
+  <text x="145" y="205" text-anchor="start" font-size="12" fill="#C62828" font-weight="bold">Loop</text>
+
+  <!-- Drift monitoring connection -->
+  <line x1="400" y1="380" x2="325" y2="305" stroke="#3949AB" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="400" y1="380" x2="525" y2="305" stroke="#3949AB" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- Warning symbol -->
+  <circle cx="125" cy="190" r="20" fill="#FFC107" stroke="#F57C00" stroke-width="2"/>
+  <text x="125" y="198" text-anchor="middle" font-size="20" font-weight="bold" fill="#D84315">!</text>
+
+  <!-- Label -->
+  <text x="400" y="470" text-anchor="middle" font-size="11" fill="#666">Models influence data collection, creating reinforcing cycles</text>
+</svg>

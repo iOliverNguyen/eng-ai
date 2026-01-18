@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .axis { stroke: #000; stroke-width: 2; }
+    .true { stroke: #888; stroke-width: 1.5; stroke-dasharray: 4 4; fill: none; }
+    .simple { stroke: #2ecc71; stroke-width: 2.5; fill: none; }
+    .complex { stroke: #e74c3c; stroke-width: 2; fill: none; }
+    .good { stroke: #f39c12; stroke-width: 3; fill: none; }
+    .pt { fill: steelblue; }
+    text { font-family: monospace; font-size: 12px; }
+  </style>
+
+  <!-- Axes -->
+  <line x1="40" y1="300" x2="460" y2="300" class="axis"/>
+  <line x1="40" y1="300" x2="40" y2="40" class="axis"/>
+
+  <text x="445" y="320">x</text>
+  <text x="20" y="55">y</text>
+
+  <!-- True underlying function -->
+  <path d="M 60 280 C 140 220, 220 180, 300 150 S 420 120, 440 115"
+  class="true"/>
+  <text x="350" y="105" fill="#777">true function</text>
+
+  <!-- Data points -->
+  <g>
+    <circle cx="60" cy="275" r="4" class="pt"/>
+    <circle cx="100" cy="245" r="4" class="pt"/>
+    <circle cx="140" cy="215" r="4" class="pt"/>
+    <circle cx="180" cy="190" r="4" class="pt"/>
+    <circle cx="220" cy="170" r="4" class="pt"/>
+    <circle cx="260" cy="160" r="4" class="pt"/>
+    <circle cx="300" cy="150" r="4" class="pt"/>
+    <circle cx="340" cy="140" r="4" class="pt"/>
+    <circle cx="380" cy="132" r="4" class="pt"/>
+    <circle cx="420" cy="125" r="4" class="pt"/>
+  </g>
+
+  <!-- Underfitting model -->
+  <line x1="50" y1="260" x2="440" y2="155" class="simple"/>
+  <text x="310" y="175" fill="#2ecc71">simple (underfit)</text>
+
+  <!-- Overfitting model -->
+  <polyline
+points="60,275 100,245 140,215 180,190 220,170 260,160 300,150 340,140 380,132 420,125"
+class="complex"/>
+  <text x="60" y="220" fill="#e74c3c">complex (overfit)</text>
+
+  <!-- Good model -->
+  <path d="M 60 278 C 140 230, 220 185, 300 152 S 420 125, 440 120"
+class="good"/>
+  <text x="190" y="140" fill="#f39c12">good compression</text>
+
+</svg>

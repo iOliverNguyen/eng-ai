@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- System boundary -->
+  <rect x="50" y="30" width="700" height="440" fill="#F9F9F9" stroke="#999" stroke-width="2" rx="10"/>
+  <text x="400" y="60" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">AI System Memory Architecture</text>
+
+  <!-- Short-term memory (Context Window) -->
+  <rect x="250" y="100" width="300" height="100" fill="#FFF9C4" stroke="#F57C00" stroke-width="3" rx="8"/>
+  <text x="400" y="130" text-anchor="middle" font-size="16" font-weight="bold">Short-Term Memory</text>
+  <text x="400" y="150" text-anchor="middle" font-size="13">(Context Window)</text>
+  <text x="400" y="175" text-anchor="middle" font-size="11" fill="#666">• Current conversation</text>
+  <text x="400" y="191" text-anchor="middle" font-size="11" fill="#666">• 4K-200K tokens • Perfect recall</text>
+
+  <!-- Working Memory (Agent State) -->
+  <rect x="80" y="240" width="280" height="100" fill="#BBDEFB" stroke="#1565C0" stroke-width="2" rx="6"/>
+  <text x="220" y="270" text-anchor="middle" font-size="14" font-weight="bold">Working Memory</text>
+  <text x="220" y="290" text-anchor="middle" font-size="12">(Agent State)</text>
+  <text x="220" y="315" text-anchor="middle" font-size="10" fill="#555">• Current goals/plans</text>
+  <text x="220" y="330" text-anchor="middle" font-size="10" fill="#555">• Pending tasks • Session data</text>
+
+  <!-- Long-Term Memory (External Storage) -->
+  <rect x="440" y="240" width="280" height="100" fill="#C8E6C9" stroke="#388E3C" stroke-width="2" rx="6"/>
+  <text x="580" y="270" text-anchor="middle" font-size="14" font-weight="bold">Long-Term Memory</text>
+  <text x="580" y="290" text-anchor="middle" font-size="12">(External Storage)</text>
+  <text x="580" y="315" text-anchor="middle" font-size="10" fill="#555">• Past interactions • User preferences</text>
+  <text x="580" y="330" text-anchor="middle" font-size="10" fill="#555">• Learned knowledge • Unbounded size</text>
+
+  <!-- Storage types under long-term -->
+  <rect x="450" y="360" width="120" height="50" fill="#E1BEE7" stroke="#7B1FA2" stroke-width="1.5" rx="4"/>
+  <text x="510" y="382" text-anchor="middle" font-size="11" font-weight="bold">Vector DB</text>
+  <text x="510" y="398" text-anchor="middle" font-size="9" fill="#555">Semantic search</text>
+
+  <rect x="590" y="360" width="120" height="50" fill="#FFCCBC" stroke="#D84315" stroke-width="1.5" rx="4"/>
+  <text x="650" y="382" text-anchor="middle" font-size="11" font-weight="bold">Database</text>
+  <text x="650" y="398" text-anchor="middle" font-size="9" fill="#555">Structured data</text>
+
+  <!-- Language Model (center) -->
+  <ellipse cx="400" cy="270" rx="50" ry="40" fill="#C5CAE9" stroke="#3949AB" stroke-width="3"/>
+  <text x="400" y="270" text-anchor="middle" font-size="12" font-weight="bold">LLM</text>
+  <text x="400" y="285" text-anchor="middle" font-size="9">Core</text>
+
+  <!-- Arrows and data flow -->
+  <defs>
+    <marker id="arrowhead-mem" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+    <marker id="arrowhead-bi" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#2196F3"/>
+    </marker>
+  </defs>
+
+  <!-- Context to LLM (bidirectional) -->
+  <line x1="400" y1="200" x2="400" y2="230" stroke="#F57C00" stroke-width="3" marker-end="url(#arrowhead-mem)"/>
+  <line x1="410" y1="230" x2="410" y2="200" stroke="#F57C00" stroke-width="3" marker-end="url(#arrowhead-mem)"/>
+  <text x="440" y="220" text-anchor="start" font-size="10" fill="#F57C00" font-weight="bold">Fast access</text>
+
+  <!-- Working memory to LLM -->
+  <line x1="360" y1="270" x2="350" y2="270" stroke="#2196F3" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrowhead-bi)"/>
+  <line x1="350" y1="280" x2="360" y2="280" stroke="#2196F3" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrowhead-bi)"/>
+
+  <!-- Long-term memory to LLM -->
+  <line x1="450" y1="280" x2="440" y2="275" stroke="#388E3C" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrowhead-bi)"/>
+  <line x1="440" y1="285" x2="450" y2="290" stroke="#388E3C" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrowhead-bi)"/>
+  <text x="445" y="265" text-anchor="middle" font-size="9" fill="#388E3C">Retrieval</text>
+  <text x="445" y="305" text-anchor="middle" font-size="9" fill="#388E3C">Storage</text>
+
+  <!-- Labels -->
+  <text x="100" y="450" text-anchor="start" font-size="11" fill="#666">⚡ Fast, limited, ephemeral</text>
+  <text x="320" y="450" text-anchor="start" font-size="11" fill="#666">💾 Structured, session-scoped</text>
+  <text x="560" y="450" text-anchor="start" font-size="11" fill="#666">🗄️ Persistent, unbounded, searchable</text>
+</svg>

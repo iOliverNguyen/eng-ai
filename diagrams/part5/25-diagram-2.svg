@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 550 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="150" y="25" font-size="14" font-family="monospace" font-weight="bold">Emergent Abilities vs. Model Size</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="300" x2="500" y2="300" stroke="black" stroke-width="2"/>
+  <line x1="80" y1="300" x2="80" y2="80" stroke="black" stroke-width="2"/>
+
+  <!-- X-axis label -->
+  <text x="230" y="325" font-size="11" font-family="monospace">Model Parameters</text>
+
+  <!-- Y-axis label -->
+  <text x="15" y="200" font-size="11" font-family="monospace" transform="rotate(-90 15 200)">Task Accuracy</text>
+
+  <!-- X-axis ticks -->
+  <line x1="180" y1="295" x2="180" y2="305" stroke="black" stroke-width="1"/>
+  <text x="170" y="320" font-size="9" font-family="monospace">1B</text>
+
+  <line x1="280" y1="295" x2="280" y2="305" stroke="black" stroke-width="1"/>
+  <text x="270" y="320" font-size="9" font-family="monospace">10B</text>
+
+  <line x1="380" y1="295" x2="380" y2="305" stroke="black" stroke-width="1"/>
+  <text x="368" y="320" font-size="9" font-family="monospace">100B</text>
+
+  <line x1="480" y1="295" x2="480" y2="305" stroke="black" stroke-width="1"/>
+  <text x="475" y="320" font-size="9" font-family="monospace">1T</text>
+
+  <!-- Y-axis ticks -->
+  <line x1="75" y1="250" x2="85" y2="250" stroke="black" stroke-width="1"/>
+  <text x="45" y="255" font-size="9" font-family="monospace">25%</text>
+
+  <line x1="75" y1="200" x2="85" y2="200" stroke="black" stroke-width="1"/>
+  <text x="45" y="205" font-size="9" font-family="monospace">50%</text>
+
+  <line x1="75" y1="150" x2="85" y2="150" stroke="black" stroke-width="1"/>
+  <text x="45" y="155" font-size="9" font-family="monospace">75%</text>
+
+  <line x1="75" y1="100" x2="85" y2="100" stroke="black" stroke-width="1"/>
+  <text x="38" y="105" font-size="9" font-family="monospace">100%</text>
+
+  <!-- Emergent ability 1: Multi-step reasoning -->
+  <path d="M 80,290 L 280,290 L 285,250 L 290,200 L 300,160 L 320,130 L 500,110" fill="none" stroke="darkblue" stroke-width="2"/>
+  <text x="380" y="120" font-size="9" font-family="monospace" fill="darkblue">Multi-step</text>
+  <text x="380" y="132" font-size="9" font-family="monospace" fill="darkblue">reasoning</text>
+
+  <!-- Emergent ability 2: Arithmetic -->
+  <path d="M 80,295 L 180,295 L 185,270 L 190,240 L 200,210 L 220,180 L 500,150" fill="none" stroke="darkgreen" stroke-width="2"/>
+  <text x="380" y="160" font-size="9" font-family="monospace" fill="darkgreen">Arithmetic</text>
+
+  <!-- Emergent ability 3: Translation -->
+  <path d="M 80,290 L 380,290 L 385,250 L 390,210 L 400,180 L 420,160 L 500,140" fill="none" stroke="darkorange" stroke-width="2"/>
+  <text x="380" y="200" font-size="9" font-family="monospace" fill="darkorange">Translation</text>
+  <text x="380" y="212" font-size="9" font-family="monospace" fill="darkorange">(rare pairs)</text>
+
+  <!-- Annotations -->
+  <text x="150" y="260" font-size="9" font-family="monospace" fill="gray">Abilities absent</text>
+  <text x="150" y="272" font-size="9" font-family="monospace" fill="gray">below threshold</text>
+
+  <line x1="230" y1="180" x2="290" y2="220" stroke="gray" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="235" y="180" font-size="8" font-family="monospace" fill="gray">Sharp</text>
+  <text x="235" y="192" font-size="8" font-family="monospace" fill="gray">transition</text>
+</svg>

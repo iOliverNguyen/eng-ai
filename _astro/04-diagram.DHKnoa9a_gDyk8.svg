@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="140" y="25" font-size="15" font-family="monospace" font-weight="bold">Bias-Variance Tradeoff</text>
+
+  <!-- Axes -->
+  <line x1="40" y1="260" x2="460" y2="260" stroke="black" stroke-width="2"/>
+  <line x1="40" y1="260" x2="40" y2="60" stroke="black" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="370" y="280" font-size="13" font-family="monospace">Model Complexity →</text>
+  <text x="50" y="55" font-size="13" font-family="monospace">Error</text>
+
+  <!-- Training error curve (decreases monotonically) -->
+  <path d="M 60,180 Q 150,140 250,100 Q 350,80 440,70"
+        fill="none" stroke="steelblue" stroke-width="2.5"/>
+  <text x="380" y="65" font-size="12" font-family="monospace" fill="steelblue">Training Error</text>
+
+  <!-- Test error curve (U-shaped) -->
+  <path d="M 60,150 Q 150,120 250,110 Q 350,130 440,180"
+        fill="none" stroke="coral" stroke-width="2.5"/>
+  <text x="380" y="190" font-size="12" font-family="monospace" fill="coral">Test Error</text>
+
+  <!-- Optimal point -->
+  <circle cx="250" cy="110" r="6" fill="green" stroke="darkgreen" stroke-width="2"/>
+  <line x1="250" y1="110" x2="250" y2="260" stroke="gray" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="200" y="275" font-size="11" font-family="monospace" fill="green">optimal</text>
+
+  <!-- Region labels -->
+  <text x="70" y="240" font-size="11" font-family="monospace" fill="gray">High Bias</text>
+  <text x="65" y="252" font-size="11" font-family="monospace" fill="gray">(Underfit)</text>
+
+  <text x="360" y="240" font-size="11" font-family="monospace" fill="gray">High Variance</text>
+  <text x="370" y="252" font-size="11" font-family="monospace" fill="gray">(Overfit)</text>
+</svg>

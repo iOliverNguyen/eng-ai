@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="180" y="25" font-size="14" font-family="monospace" font-weight="bold">LSTM Cell</text>
+
+  <!-- Cell state flow (top horizontal line) -->
+  <line x1="20" y1="100" x2="470" y2="100" stroke="red" stroke-width="3"/>
+  <text x="200" y="85" font-size="10" font-family="monospace" fill="red">Cell state c_t</text>
+
+  <!-- Forget gate -->
+  <rect x="80" y="140" width="50" height="40" fill="lightyellow" stroke="black" stroke-width="2" rx="5"/>
+  <text x="92" y="165" font-size="10" font-family="monospace">f_t</text>
+  <circle cx="105" cy="100" r="10" fill="lightyellow" stroke="black" stroke-width="2"/>
+  <text x="102" y="105" font-size="12" font-family="monospace">×</text>
+  <line x1="105" y1="140" x2="105" y2="110" stroke="black" stroke-width="2"/>
+  <text x="60" y="200" font-size="9" font-family="monospace" fill="gray">Forget</text>
+
+  <!-- Input gate -->
+  <rect x="180" y="140" width="50" height="40" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="195" y="165" font-size="10" font-family="monospace">i_t</text>
+  <rect x="260" y="140" width="50" height="40" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="270" y="165" font-size="10" font-family="monospace">~c_t</text>
+
+  <circle cx="285" cy="100" r="10" fill="lightgreen" stroke="black" stroke-width="2"/>
+  <text x="282" y="105" font-size="12" font-family="monospace">×</text>
+  <line x1="205" y1="140" x2="205" y2="120" stroke="black" stroke-width="2"/>
+  <line x1="205" y1="120" x2="275" y2="120" stroke="black" stroke-width="2"/>
+  <line x1="275" y1="120" x2="275" y2="110" stroke="black" stroke-width="2"/>
+  <line x1="285" y1="140" x2="285" y2="110" stroke="black" stroke-width="2"/>
+
+  <circle cx="315" cy="100" r="10" fill="white" stroke="black" stroke-width="2"/>
+  <text x="312" y="105" font-size="12" font-family="monospace">+</text>
+  <text x="250" y="200" font-size="9" font-family="monospace" fill="gray">Add new</text>
+
+  <!-- Output gate -->
+  <rect x="360" y="140" width="50" height="40" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="372" y="165" font-size="10" font-family="monospace">o_t</text>
+  <circle cx="385" cy="100" r="10" fill="lightblue" stroke="black" stroke-width="2"/>
+  <text x="382" y="105" font-size="12" font-family="monospace">×</text>
+  <line x1="385" y1="140" x2="385" y2="110" stroke="black" stroke-width="2"/>
+  <text x="360" y="200" font-size="9" font-family="monospace" fill="gray">Output</text>
+
+  <!-- Hidden state output -->
+  <line x1="385" y1="90" x2="385" y2="50" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="390" y="70" font-size="10" font-family="monospace">h_t</text>
+
+  <!-- Input -->
+  <line x1="250" y1="250" x2="250" y2="220" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="220" y="270" font-size="10" font-family="monospace">[h_{t-1}, x_t]</text>
+
+  <!-- Connections to gates -->
+  <line x1="105" y1="220" x2="105" y2="180" stroke="black" stroke-width="1"/>
+  <line x1="205" y1="220" x2="205" y2="180" stroke="black" stroke-width="1"/>
+  <line x1="285" y1="220" x2="285" y2="180" stroke="black" stroke-width="1"/>
+  <line x1="385" y1="220" x2="385" y2="180" stroke="black" stroke-width="1"/>
+  <line x1="105" y1="220" x2="385" y2="220" stroke="gray" stroke-width="1"/>
+  <line x1="250" y1="220" x2="250" y2="220" stroke="black" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text x="100" y="35" font-size="9" font-family="monospace" fill="gray">Gates control information flow:</text>
+  <text x="100" y="48" font-size="9" font-family="monospace" fill="gray">σ(·) outputs 0-1 to gate signals</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

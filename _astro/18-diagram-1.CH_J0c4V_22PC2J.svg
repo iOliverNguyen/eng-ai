@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="140" y="25" font-size="14" font-family="monospace" font-weight="bold">Embedding Space (2D Projection)</text>
+
+  <!-- Axes -->
+  <line x1="50" y1="280" x2="450" y2="280" stroke="black" stroke-width="2"/>
+  <line x1="50" y1="280" x2="50" y2="50" stroke="black" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="220" y="305" font-size="11" font-family="monospace" fill="gray">Dimension 1</text>
+  <text x="10" y="170" font-size="11" font-family="monospace" fill="gray">Dim 2</text>
+
+  <!-- Animal cluster -->
+  <circle cx="120" cy="100" r="5" fill="steelblue"/>
+  <text x="125" y="103" font-size="9" font-family="monospace">dog</text>
+  <circle cx="140" cy="110" r="5" fill="steelblue"/>
+  <text x="145" y="115" font-size="9" font-family="monospace">cat</text>
+  <circle cx="110" cy="120" r="5" fill="steelblue"/>
+  <text x="85" y="125" font-size="9" font-family="monospace">puppy</text>
+
+  <!-- Royalty cluster -->
+  <circle cx="350" cy="180" r="4" fill="gold"/>
+  <text x="360" y="185" font-size="8" font-family="monospace">king</text>
+  <circle cx="370" cy="170" r="4" fill="gold"/>
+  <text x="375" y="172" font-size="8" font-family="monospace">queen</text>
+  <circle cx="360" cy="195" r="4" fill="gold"/>
+  <text x="370" y="197" font-size="8" font-family="monospace">prince</text>
+
+  <!-- Distance line -->
+  <line x1="105" y1="110" x2="395" y2="235" stroke="gray" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="180" y="170" font-size="9" font-family="monospace" fill="gray">Distance = dissimilarity</text>
+
+  <!-- Legend -->
+  <text x="30" y="300" font-size="10" font-family="monospace" fill="gray">Points close in space = similar in meaning</text>
+</svg>

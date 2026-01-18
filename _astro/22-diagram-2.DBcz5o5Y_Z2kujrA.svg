@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 550 330" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="180" y="25" font-size="14" font-family="monospace" font-weight="bold">Data Scaling Laws</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="280" x2="500" y2="280" stroke="black" stroke-width="2"/>
+  <line x1="80" y1="280" x2="80" y2="60" stroke="black" stroke-width="2"/>
+
+  <!-- X-axis label -->
+  <text x="230" y="305" font-size="11" font-family="monospace">Training Data (tokens, log scale)</text>
+
+  <!-- Y-axis label -->
+  <text x="15" y="175" font-size="11" font-family="monospace" transform="rotate(-90 15 175)">Loss (log scale)</text>
+
+  <!-- X-axis ticks and labels -->
+  <line x1="140" y1="275" x2="140" y2="285" stroke="black" stroke-width="1"/>
+  <text x="125" y="300" font-size="9" font-family="monospace">10B</text>
+
+  <line x1="230" y1="275" x2="230" y2="285" stroke="black" stroke-width="1"/>
+  <text x="215" y="300" font-size="9" font-family="monospace">100B</text>
+
+  <line x1="320" y1="275" x2="320" y2="285" stroke="black" stroke-width="1"/>
+  <text x="310" y="300" font-size="9" font-family="monospace">1T</text>
+
+  <line x1="410" y1="275" x2="410" y2="285" stroke="black" stroke-width="1"/>
+  <text x="400" y="300" font-size="9" font-family="monospace">10T</text>
+
+  <!-- Y-axis ticks and labels -->
+  <line x1="75" y1="230" x2="85" y2="230" stroke="black" stroke-width="1"/>
+  <text x="50" y="235" font-size="9" font-family="monospace">3.0</text>
+
+  <line x1="75" y1="180" x2="85" y2="180" stroke="black" stroke-width="1"/>
+  <text x="50" y="185" font-size="9" font-family="monospace">2.5</text>
+
+  <line x1="75" y1="130" x2="85" y2="130" stroke="black" stroke-width="1"/>
+  <text x="50" y="135" font-size="9" font-family="monospace">2.0</text>
+
+  <line x1="75" y1="80" x2="85" y2="80" stroke="black" stroke-width="1"/>
+  <text x="50" y="85" font-size="9" font-family="monospace">1.5</text>
+
+  <!-- Scaling curve (power law) -->
+  <path d="M 140,210 Q 230,170 320,140 T 410,100" fill="none" stroke="steelblue" stroke-width="3"/>
+
+  <!-- Data points -->
+  <circle cx="140" cy="210" r="5" fill="steelblue" stroke="black" stroke-width="1"/>
+  <text x="145" y="210" font-size="9" font-family="monospace">GPT-2</text>
+
+  <circle cx="230" cy="160" r="5" fill="steelblue" stroke="black" stroke-width="1"/>
+  <text x="235" y="160" font-size="9" font-family="monospace">GPT-3</text>
+
+  <circle cx="320" cy="130" r="5" fill="steelblue" stroke="black" stroke-width="1"/>
+  <text x="325" y="130" font-size="9" font-family="monospace">PaLM</text>
+
+  <circle cx="410" cy="105" r="5" fill="steelblue" stroke="black" stroke-width="1"/>
+  <text x="415" y="105" font-size="9" font-family="monospace">Future?</text>
+
+  <!-- Annotations -->
+  <text x="300" y="240" font-size="9" font-family="monospace" fill="gray">Power law: L ∝ D^(-α)</text>
+  <text x="270" y="255" font-size="9" font-family="monospace" fill="gray">Straight line in log-log space</text>
+
+  <line x1="200" y1="115" x2="300" y2="155" stroke="gray" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="305" y="160" font-size="8" font-family="monospace" fill="gray">More data →</text>
+  <text x="305" y="172" font-size="8" font-family="monospace" fill="gray">Lower loss</text>
+</svg>

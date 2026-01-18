@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="170" y="25" font-size="14" font-family="monospace" font-weight="bold">Prompt Pattern Comparison</text>
+
+  <!-- Zero-shot -->
+  <rect x="40" y="60" width="160" height="220" fill="lightyellow" stroke="black" stroke-width="2" rx="5"/>
+  <text x="70" y="85" font-size="11" font-family="monospace" font-weight="bold">Zero-Shot</text>
+  <text x="50" y="110" font-size="9" font-family="monospace">Translate to French:</text>
+  <text x="50" y="125" font-size="9" font-family="monospace">Hello</text>
+  <text x="50" y="150" font-size="9" font-family="monospace" fill="green">→ Bonjour</text>
+  <text x="50" y="180" font-size="8" font-family="monospace" fill="gray">✓ Token-efficient</text>
+  <text x="50" y="195" font-size="8" font-family="monospace" fill="gray">✗ Less reliable</text>
+  <text x="50" y="210" font-size="8" font-family="monospace" fill="gray">✗ Works for common</text>
+  <text x="50" y="225" font-size="8" font-family="monospace" fill="gray">  tasks only</text>
+
+  <!-- Few-shot -->
+  <rect x="220" y="60" width="160" height="220" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="250" y="85" font-size="11" font-family="monospace" font-weight="bold">Few-Shot</text>
+  <text x="230" y="110" font-size="9" font-family="monospace">Cat → Chat</text>
+  <text x="230" y="125" font-size="9" font-family="monospace">Dog → Chien</text>
+  <text x="230" y="140" font-size="9" font-family="monospace">Hello →</text>
+  <text x="230" y="165" font-size="9" font-family="monospace" fill="green">→ Bonjour</text>
+  <text x="230" y="195" font-size="8" font-family="monospace" fill="gray">✓ More reliable</text>
+  <text x="230" y="210" font-size="8" font-family="monospace" fill="gray">✗ Uses tokens</text>
+  <text x="230" y="225" font-size="8" font-family="monospace" fill="gray">✓ Teaches pattern</text>
+
+  <!-- Chain-of-thought -->
+  <rect x="400" y="60" width="180" height="220" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="420" y="85" font-size="11" font-family="monospace" font-weight="bold">Chain-of-Thought</text>
+  <text x="410" y="110" font-size="8" font-family="monospace">Problem: 5 + 2×3 =?</text>
+  <text x="410" y="125" font-size="8" font-family="monospace">Let's solve:</text>
+  <text x="410" y="140" font-size="8" font-family="monospace">1. 2×3 = 6</text>
+  <text x="410" y="155" font-size="8" font-family="monospace">2. 5 + 6 = 11</text>
+  <text x="410" y="175" font-size="9" font-family="monospace" fill="green">→ Answer: 11</text>
+  <text x="410" y="205" font-size="8" font-family="monospace" fill="gray">✓ Unlocks reasoning</text>
+  <text x="410" y="220" font-size="8" font-family="monospace" fill="gray">✗ Longer outputs</text>
+  <text x="410" y="235" font-size="8" font-family="monospace" fill="gray">✓ Reduces errors</text>
+</svg>

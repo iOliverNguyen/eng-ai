@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="110" y="25" font-size="15" font-family="monospace" font-weight="bold">Hierarchical Feature Learning</text>
+
+  <!-- Raw data (input image) -->
+  <rect x="30" y="60" width="60" height="60" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="38" y="95" font-size="11" font-family="monospace">Raw</text>
+  <text x="35" y="108" font-size="11" font-family="monospace">Image</text>
+
+  <!-- Arrow -->
+  <line x1="90" y1="90" x2="130" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 1: Low-level features -->
+  <rect x="130" y="50" width="80" height="80" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="145" y="80" font-size="10" font-family="monospace">Layer 1:</text>
+  <text x="140" y="95" font-size="10" font-family="monospace">Edges,</text>
+  <text x="140" y="108" font-size="10" font-family="monospace">Textures</text>
+
+  <!-- Arrow -->
+  <line x1="210" y1="90" x2="250" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2: Mid-level features -->
+  <rect x="250" y="50" width="80" height="80" fill="khaki" stroke="black" stroke-width="2" rx="5"/>
+  <text x="265" y="80" font-size="10" font-family="monospace">Layer 2:</text>
+  <text x="260" y="95" font-size="10" font-family="monospace">Shapes,</text>
+  <text x="260" y="108" font-size="10" font-family="monospace">Parts</text>
+
+  <!-- Arrow -->
+  <line x1="330" y1="90" x2="370" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3: High-level features -->
+  <rect x="370" y="50" width="80" height="80" fill="lightcoral" stroke="black" stroke-width="2" rx="5"/>
+  <text x="385" y="80" font-size="10" font-family="monospace">Layer 3:</text>
+  <text x="380" y="95" font-size="10" font-family="monospace">Objects,</text>
+  <text x="380" y="108" font-size="10" font-family="monospace">Concepts</text>
+
+  <!-- Examples at each layer -->
+  <text x="135" y="145" font-size="9" font-family="monospace" fill="gray">/ | \ —</text>
+  <text x="260" y="145" font-size="9" font-family="monospace" fill="gray">circles, curves</text>
+  <text x="380" y="145" font-size="9" font-family="monospace" fill="gray">face, car</text>
+
+  <!-- Representation space illustration -->
+  <text x="90" y="180" font-size="13" font-family="monospace" font-weight="bold">Representation Space:</text>
+
+  <!-- Before -->
+  <text x="50" y="210" font-size="12" font-family="monospace">Before (pixels):</text>
+  <circle cx="70" cy="240" r="3" fill="steelblue"/>
+  <circle cx="130" cy="235" r="3" fill="steelblue"/>
+  <circle cx="90" cy="255" r="3" fill="coral"/>
+  <circle cx="150" cy="250" r="3" fill="coral"/>
+  <circle cx="110" cy="230" r="3" fill="steelblue"/>
+  <circle cx="140" cy="260" r="3" fill="coral"/>
+  <text x="55" y="285" font-size="10" font-family="monospace" fill="gray">mixed, no structure</text>
+
+  <!-- After -->
+  <text x="270" y="210" font-size="12" font-family="monospace">After (features):</text>
+  <circle cx="310" cy="235" r="3" fill="steelblue"/>
+  <circle cx="320" cy="240" r="3" fill="steelblue"/>
+  <circle cx="315" cy="245" r="3" fill="steelblue"/>
+  <circle cx="390" cy="235" r="3" fill="coral"/>
+  <circle cx="400" cy="240" r="3" fill="coral"/>
+  <circle cx="395" cy="245" r="3" fill="coral"/>
+  <text x="285" y="285" font-size="10" font-family="monospace" fill="gray">separated, clustered</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

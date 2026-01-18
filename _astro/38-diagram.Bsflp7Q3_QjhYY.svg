@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">Self-Improvement Loop: Promise and Peril</text>
+
+  <!-- Model v1 -->
+  <rect x="100" y="100" width="120" height="60" fill="#dbeafe" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="160" y="125" font-size="14" font-weight="bold" text-anchor="middle" fill="#1e40af">Model v1</text>
+  <text x="160" y="145" font-size="11" text-anchor="middle" fill="#333">Trained on real data</text>
+
+  <!-- Arrow from v1 to synthetic data 1 -->
+  <path d="M 220,130 L 300,130" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="260" y="120" font-size="10" fill="#666">generates</text>
+
+  <!-- Synthetic data 1 -->
+  <circle cx="340" cy="130" r="40" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="340" y="125" font-size="11" font-weight="bold" text-anchor="middle" fill="#d97706">Synthetic</text>
+  <text x="340" y="140" font-size="11" text-anchor="middle" fill="#d97706">Data 1</text>
+
+  <!-- Arrow from synthetic data 1 to Model v2 -->
+  <path d="M 380,130 L 460,130" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="420" y="120" font-size="10" fill="#666">trains</text>
+
+  <!-- Model v2 -->
+  <rect x="480" y="100" width="120" height="60" fill="#dbeafe" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="540" y="125" font-size="14" font-weight="bold" text-anchor="middle" fill="#1e40af">Model v2</text>
+  <text x="540" y="145" font-size="11" text-anchor="middle" fill="#333">Slightly degraded</text>
+
+  <!-- Arrow from v2 to synthetic data 2 -->
+  <path d="M 600,130 L 650,180" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Synthetic data 2 -->
+  <circle cx="680" cy="210" r="40" fill="#fed7aa" stroke="#d97706" stroke-width="2"/>
+  <text x="680" y="205" font-size="11" font-weight="bold" text-anchor="middle" fill="#d97706">Synthetic</text>
+  <text x="680" y="220" font-size="11" text-anchor="middle" fill="#d97706">Data 2</text>
+
+  <!-- Arrow from synthetic data 2 to Model v3 -->
+  <path d="M 650,240 L 580,280" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Model v3 -->
+  <rect x="480" y="290" width="120" height="60" fill="#bfdbfe" stroke="#1e40af" stroke-width="2" rx="5"/>
+  <text x="540" y="315" font-size="14" font-weight="bold" text-anchor="middle" fill="#1e40af">Model v3</text>
+  <text x="540" y="335" font-size="11" text-anchor="middle" fill="#333">More degraded</text>
+
+  <!-- Arrow from v3 to collapse warning -->
+  <path d="M 480,320 L 380,320" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#arrowhead-red)"/>
+
+  <!-- Collapse warning -->
+  <rect x="180" y="290" width="180" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="3" rx="5"/>
+  <text x="270" y="315" font-size="14" font-weight="bold" text-anchor="middle" fill="#dc2626">⚠️ Model Collapse</text>
+  <text x="270" y="335" font-size="10" text-anchor="middle" fill="#dc2626">Diversity loss, errors amplified</text>
+
+  <!-- Prevention: Real data feedback -->
+  <rect x="100" y="400" width="200" height="60" fill="#dcfce7" stroke="#16a34a" stroke-width="3" rx="5"/>
+  <text x="200" y="425" font-size="13" font-weight="bold" text-anchor="middle" fill="#16a34a">✓ Prevention: Mix Real Data</text>
+  <text x="200" y="445" font-size="10" text-anchor="middle" fill="#16a34a">Maintain diversity, prevent collapse</text>
+
+  <!-- Arrow from prevention to v1 -->
+  <path d="M 200,400 L 160,160" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead-green)"/>
+
+  <!-- Quality over iterations -->
+  <text x="50" y="250" font-size="12" font-weight="bold" fill="#666">Quality →</text>
+  <text x="50" y="270" font-size="11" fill="#059669">High</text>
+  <text x="50" y="320" font-size="11" fill="#d97706">Medium</text>
+  <text x="50" y="370" font-size="11" fill="#dc2626">Low</text>
+
+  <!-- Arrowhead marker definitions -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#16a34a"/>
+    </marker>
+  </defs>
+</svg>

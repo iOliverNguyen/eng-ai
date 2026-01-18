@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="160" y="25" font-size="14" font-family="monospace" font-weight="bold">Transformer Block</text>
+
+  <!-- Input -->
+  <rect x="210" y="330" width="80" height="30" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="225" y="350" font-size="10" font-family="monospace">Input X^(l)</text>
+
+  <!-- Multi-head attention -->
+  <line x1="250" y1="330" x2="250" y2="290" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="190" y="250" width="120" height="40" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="200" y="273" font-size="10" font-family="monospace">Multi-Head</text>
+  <text x="205" y="285" font-size="10" font-family="monospace">Attention</text>
+
+  <!-- Residual connection 1 -->
+  <path d="M 150,270 L 150,330 L 210,330" fill="none" stroke="red" stroke-width="2"/>
+  <text x="110" y="300" font-size="9" font-family="monospace" fill="red">residual</text>
+
+  <!-- Add & Norm 1 -->
+  <line x1="250" y1="250" x2="250" y2="220" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="250" cy="235" r="12" fill="white" stroke="red" stroke-width="2"/>
+  <text x="247" y="240" font-size="12" font-family="monospace">+</text>
+
+  <rect x="210" y="190" width="80" height="30" fill="khaki" stroke="black" stroke-width="2" rx="5"/>
+  <text x="215" y="210" font-size="9" font-family="monospace">LayerNorm</text>
+
+  <!-- FFN -->
+  <line x1="250" y1="190" x2="250" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="210" y="110" width="80" height="40" fill="lightcoral" stroke="black" stroke-width="2" rx="5"/>
+  <text x="235" y="128" font-size="10" font-family="monospace">FFN</text>
+  <text x="215" y="143" font-size="8" font-family="monospace">(2-layer MLP)</text>
+
+  <!-- Residual connection 2 -->
+  <path d="M 350,130 L 350,205 L 290,205" fill="none" stroke="red" stroke-width="2"/>
+  <text x="360" y="170" font-size="9" font-family="monospace" fill="red">residual</text>
+
+  <!-- Add & Norm 2 -->
+  <line x1="250" y1="110" x2="250" y2="80" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <circle cx="250" cy="95" r="12" fill="white" stroke="red" stroke-width="2"/>
+  <text x="247" y="100" font-size="12" font-family="monospace">+</text>
+
+  <rect x="210" y="50" width="80" height="30" fill="khaki" stroke="black" stroke-width="2" rx="5"/>
+  <text x="215" y="70" font-size="9" font-family="monospace">LayerNorm</text>
+
+  <!-- Output -->
+  <line x1="250" y1="50" x2="250" y2="20" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="260" y="35" font-size="10" font-family="monospace">to next layer</text>
+
+  <!-- Annotations -->
+  <text x="330" y="270" font-size="9" font-family="monospace" fill="gray">Self-attention</text>
+  <text x="330" y="280" font-size="9" font-family="monospace" fill="gray">connects all</text>
+  <text x="330" y="290" font-size="9" font-family="monospace" fill="gray">positions</text>
+
+  <text x="330" y="130" font-size="9" font-family="monospace" fill="gray">Position-wise</text>
+  <text x="330" y="140" font-size="9" font-family="monospace" fill="gray">transformation</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

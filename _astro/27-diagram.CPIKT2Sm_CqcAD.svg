@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="170" y="25" font-size="14" font-family="monospace" font-weight="bold">RAG Pipeline</text>
+
+  <!-- User query -->
+  <rect x="40" y="60" width="120" height="35" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="50" y="82" font-size="10" font-family="monospace" font-weight="bold">User Query</text>
+
+  <!-- Arrow 1 -->
+  <line x1="170" y1="77" x2="210" y2="77" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="175" y="70" font-size="8" font-family="monospace" fill="gray">Embed</text>
+
+  <!-- Query embedding -->
+  <rect x="210" y="60" width="80" height="35" fill="khaki" stroke="black" stroke-width="2" rx="5"/>
+  <text x="220" y="82" font-size="9" font-family="monospace">Query Vec</text>
+
+  <!-- Arrow 2 -->
+  <line x1="300" y1="77" x2="340" y2="77" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="305" y="70" font-size="8" font-family="monospace" fill="gray">Search</text>
+
+  <!-- Vector database -->
+  <rect x="340" y="40" width="220" height="75" fill="lightyellow" stroke="black" stroke-width="2" rx="5"/>
+  <text x="360" y="62" font-size="10" font-family="monospace" font-weight="bold">Vector Database</text>
+  <circle cx="390" cy="85" r="8" fill="lightgreen" stroke="black" stroke-width="1"/>
+  <circle cx="420" cy="90" r="8" fill="lightgreen" stroke="black" stroke-width="1"/>
+  <circle cx="450" cy="85" r="8" fill="lightgreen" stroke="black" stroke-width="1"/>
+  <circle cx="480" cy="88" r="8" fill="lightgreen" stroke="black" stroke-width="1"/>
+  <circle cx="510" cy="92" r="8" fill="lightgreen" stroke="black" stroke-width="1"/>
+  <text x="350" y="108" font-size="8" font-family="monospace" fill="gray">Document embeddings</text>
+
+  <!-- Arrow 3 (down) -->
+  <line x1="450" y1="125" x2="450" y2="155" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="455" y="145" font-size="8" font-family="monospace" fill="gray">Top-k</text>
+
+  <!-- Retrieved docs -->
+  <rect x="340" y="165" width="220" height="35" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="360" y="187" font-size="10" font-family="monospace" font-weight="bold">Retrieved Documents</text>
+
+  <!-- Arrow 4 (left) -->
+  <line x1="330" y1="182" x2="170" y2="182" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="220" y="175" font-size="8" font-family="monospace" fill="gray">Context</text>
+
+  <!-- LLM with context -->
+  <rect x="40" y="150" width="120" height="65" fill="lightcoral" stroke="black" stroke-width="2" rx="5"/>
+  <text x="60" y="172" font-size="10" font-family="monospace" font-weight="bold">LLM</text>
+  <text x="50" y="190" font-size="8" font-family="monospace">Query + Docs</text>
+  <text x="50" y="205" font-size="8" font-family="monospace">→ Response</text>
+
+  <!-- Arrow 5 (down) -->
+  <line x1="100" y1="225" x2="100" y2="255" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Response -->
+  <rect x="40" y="265" width="120" height="35" fill="lavender" stroke="black" stroke-width="2" rx="5"/>
+  <text x="60" y="287" font-size="10" font-family="monospace" font-weight="bold">Grounded</text>
+  <text x="60" y="295" font-size="10" font-family="monospace" font-weight="bold">Response</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

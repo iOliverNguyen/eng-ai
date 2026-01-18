@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="140" y="25" font-size="14" font-family="monospace" font-weight="bold">Information Flow Through Layers</text>
+
+  <!-- Input -->
+  <rect x="30" y="80" width="60" height="60" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="40" y="115" font-size="11" font-family="monospace">Input</text>
+  <text x="35" y="155" font-size="9" font-family="monospace" fill="gray">Raw data</text>
+
+  <!-- Arrow -->
+  <line x1="90" y1="110" x2="130" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 1 -->
+  <rect x="130" y="70" width="70" height="80" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="145" y="100" font-size="11" font-family="monospace">Layer 1</text>
+  <text x="140" y="120" font-size="9" font-family="monospace" fill="gray">Low-level</text>
+  <text x="142" y="132" font-size="9" font-family="monospace" fill="gray">features</text>
+
+  <!-- Arrow -->
+  <line x1="200" y1="110" x2="240" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 2 -->
+  <rect x="240" y="70" width="70" height="80" fill="khaki" stroke="black" stroke-width="2" rx="5"/>
+  <text x="255" y="100" font-size="11" font-family="monospace">Layer 2</text>
+  <text x="248" y="120" font-size="9" font-family="monospace" fill="gray">Mid-level</text>
+  <text x="250" y="132" font-size="9" font-family="monospace" fill="gray">patterns</text>
+
+  <!-- Arrow -->
+  <line x1="310" y1="110" x2="350" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Layer 3 -->
+  <rect x="350" y="70" width="70" height="80" fill="lightcoral" stroke="black" stroke-width="2" rx="5"/>
+  <text x="365" y="100" font-size="11" font-family="monospace">Layer 3</text>
+  <text x="358" y="120" font-size="9" font-family="monospace" fill="gray">High-level</text>
+  <text x="360" y="132" font-size="9" font-family="monospace" fill="gray">concepts</text>
+
+  <!-- Arrow -->
+  <line x1="420" y1="110" x2="460" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Output -->
+  <rect x="430" y="160" width="50" height="40" fill="gold" stroke="black" stroke-width="2" rx="5"/>
+  <text x="440" y="185" font-size="11" font-family="monospace">Output</text>
+
+  <!-- Information content bars -->
+  <text x="120" y="200" font-size="12" font-family="monospace" font-weight="bold">Information Content:</text>
+
+  <!-- Bar 1 - high -->
+  <rect x="145" y="220" width="15" height="60" fill="steelblue" stroke="black" stroke-width="1"/>
+  <text x="138" y="295" font-size="9" font-family="monospace">Layer 1</text>
+
+  <!-- Bar 2 - medium -->
+  <rect x="255" y="240" width="15" height="40" fill="steelblue" stroke="black" stroke-width="1"/>
+  <text x="248" y="295" font-size="9" font-family="monospace">Layer 2</text>
+
+  <!-- Bar 3 - low -->
+  <rect x="365" y="260" width="15" height="20" fill="steelblue" stroke="black" stroke-width="1"/>
+  <text x="358" y="295" font-size="9" font-family="monospace">Layer 3</text>
+
+  <text x="180" y="310" font-size="10" font-family="monospace" fill="gray">(Task-relevant info increases →)</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

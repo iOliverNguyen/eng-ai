@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 550 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="160" y="25" font-size="14" font-family="monospace" font-weight="bold">RNN Unrolled Through Time</text>
+
+  <!-- Time steps -->
+  <text x="40" y="70" font-size="11" font-family="monospace">t-1</text>
+  <text x="180" y="70" font-size="11" font-family="monospace">t</text>
+  <text x="320" y="70" font-size="11" font-family="monospace">t+1</text>
+  <text x="460" y="70" font-size="11" font-family="monospace">t+2</text>
+
+  <!-- Inputs -->
+  <circle cx="60" cy="250" r="20" fill="lightblue" stroke="black" stroke-width="2"/>
+  <text x="53" y="255" font-size="10" font-family="monospace">x_{t-1}</text>
+
+  <circle cx="200" cy="250" r="20" fill="lightblue" stroke="black" stroke-width="2"/>
+  <text x="195" y="255" font-size="10" font-family="monospace">x_t</text>
+
+  <circle cx="340" cy="250" r="20" fill="lightblue" stroke="black" stroke-width="2"/>
+  <text x="330" y="255" font-size="10" font-family="monospace">x_{t+1}</text>
+
+  <circle cx="480" cy="250" r="20" fill="lightblue" stroke="black" stroke-width="2"/>
+  <text x="470" y="255" font-size="10" font-family="monospace">x_{t+2}</text>
+
+  <!-- Hidden states -->
+  <rect x="35" y="140" width="50" height="50" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="45" y="170" font-size="10" font-family="monospace">RNN</text>
+
+  <rect x="175" y="140" width="50" height="50" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="185" y="170" font-size="10" font-family="monospace">RNN</text>
+
+  <rect x="315" y="140" width="50" height="50" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="325" y="170" font-size="10" font-family="monospace">RNN</text>
+
+  <rect x="455" y="140" width="50" height="50" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="465" y="170" font-size="10" font-family="monospace">RNN</text>
+
+  <!-- Outputs -->
+  <circle cx="60" cy="90" r="20" fill="gold" stroke="black" stroke-width="2"/>
+  <text x="53" y="95" font-size="10" font-family="monospace">y_{t-1}</text>
+
+  <circle cx="200" cy="90" r="20" fill="gold" stroke="black" stroke-width="2"/>
+  <text x="195" y="95" font-size="10" font-family="monospace">y_t</text>
+
+  <circle cx="340" cy="90" r="20" fill="gold" stroke="black" stroke-width="2"/>
+  <text x="330" y="95" font-size="10" font-family="monospace">y_{t+1}</text>
+
+  <circle cx="480" cy="90" r="20" fill="gold" stroke="black" stroke-width="2"/>
+  <text x="470" y="95" font-size="10" font-family="monospace">y_{t+2}</text>
+
+  <!-- Vertical connections (input to hidden, hidden to output) -->
+  <line x1="60" y1="230" x2="60" y2="190" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="200" y1="230" x2="200" y2="190" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="340" y1="230" x2="340" y2="190" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="230" x2="480" y2="190" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <line x1="60" y1="140" x2="60" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="200" y1="140" x2="200" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="340" y1="140" x2="340" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="140" x2="480" y2="110" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Recurrent connections (horizontal) -->
+  <line x1="85" y1="165" x2="175" y2="165" stroke="red" stroke-width="3" marker-end="url(#arrowred)"/>
+  <text x="115" y="160" font-size="9" font-family="monospace" fill="red">h_{t-1}</text>
+
+  <line x1="225" y1="165" x2="315" y2="165" stroke="red" stroke-width="3" marker-end="url(#arrowred)"/>
+  <text x="260" y="160" font-size="9" font-family="monospace" fill="red">h_t</text>
+
+  <line x1="365" y1="165" x2="455" y2="165" stroke="red" stroke-width="3" marker-end="url(#arrowred)"/>
+  <text x="395" y="160" font-size="9" font-family="monospace" fill="red">h_{t+1}</text>
+
+  <!-- Labels -->
+  <text x="150" y="300" font-size="10" font-family="monospace" fill="gray">Time flows →</text>
+  <text x="100" y="40" font-size="9" font-family="monospace" fill="red">Hidden state (memory) flows through time</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="red"/>
+    </marker>
+  </defs>
+</svg>

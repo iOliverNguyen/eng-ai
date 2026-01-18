@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="150" y="25" font-size="14" font-family="monospace" font-weight="bold">Fine-Tuning: Before and After</text>
+
+  <!-- Before (pretrained) -->
+  <text x="40" y="70" font-size="12" font-family="monospace" font-weight="bold">Before: Pretrained Model</text>
+
+  <rect x="40" y="85" width="220" height="80" fill="lightyellow" stroke="black" stroke-width="2" rx="5"/>
+  <text x="50" y="105" font-size="9" font-family="monospace" font-weight="bold">Input:</text>
+  <text x="50" y="120" font-size="9" font-family="monospace">"User: What is the capital</text>
+  <text x="50" y="133" font-size="9" font-family="monospace">of France?"</text>
+
+  <text x="50" y="155" font-size="9" font-family="monospace" font-weight="bold" fill="red">Output (unhelpful):</text>
+  <text x="50" y="170" font-size="8" font-family="monospace">"User: How do I cook pasta?"</text>
+  <text x="50" y="182" font-size="8" font-family="monospace">"User: Why is the sky blue?"</text>
+
+  <text x="270" y="125" font-size="11" font-family="monospace" fill="gray">Completes</text>
+  <text x="270" y="140" font-size="11" font-family="monospace" fill="gray">with more</text>
+  <text x="270" y="155" font-size="11" font-family="monospace" fill="gray">questions</text>
+
+  <!-- Fine-tuning process -->
+  <text x="240" y="210" font-size="11" font-family="monospace" fill="gray">↓ Fine-Tuning ↓</text>
+  <rect x="180" y="220" width="160" height="30" fill="lightgreen" stroke="black" stroke-width="2" rx="5"/>
+  <text x="190" y="240" font-size="9" font-family="monospace">Train on (prompt, response)</text>
+
+  <!-- After (fine-tuned) -->
+  <text x="320" y="70" font-size="12" font-family="monospace" font-weight="bold">After: Fine-Tuned Model</text>
+
+  <rect x="320" y="85" width="240" height="80" fill="lightblue" stroke="black" stroke-width="2" rx="5"/>
+  <text x="330" y="105" font-size="9" font-family="monospace" font-weight="bold">Input:</text>
+  <text x="330" y="120" font-size="9" font-family="monospace">"User: What is the capital</text>
+  <text x="330" y="133" font-size="9" font-family="monospace">of France?"</text>
+
+  <text x="330" y="155" font-size="9" font-family="monospace" font-weight="bold" fill="green">Output (helpful):</text>
+  <text x="330" y="170" font-size="8" font-family="monospace">"The capital of France is</text>
+  <text x="330" y="182" font-size="8" font-family="monospace">Paris."</text>
+
+  <!-- Annotation -->
+  <text x="140" y="285" font-size="9" font-family="monospace" fill="gray">Fine-tuning shifts model from raw text completion</text>
+  <text x="140" y="300" font-size="9" font-family="monospace" fill="gray">to helpful instruction following by training on</text>
+  <text x="140" y="315" font-size="9" font-family="monospace" fill="gray">curated (input, desired_output) examples</text>
+</svg>

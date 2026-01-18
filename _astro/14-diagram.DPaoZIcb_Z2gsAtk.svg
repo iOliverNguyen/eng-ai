@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="140" y="25" font-size="14" font-family="monospace" font-weight="bold">Optimizer Comparisons</text>
+
+  <!-- Loss surface contours -->
+  <ellipse cx="250" cy="150" rx="180" ry="100" fill="none" stroke="lightgray" stroke-width="1"/>
+  <ellipse cx="250" cy="150" rx="140" ry="75" fill="none" stroke="lightgray" stroke-width="1"/>
+  <ellipse cx="250" cy="150" rx="100" ry="50" fill="none" stroke="lightgray" stroke-width="1"/>
+  <ellipse cx="250" cy="150" rx="60" ry="30" fill="none" stroke="lightgray" stroke-width="1"/>
+
+  <!-- Minimum -->
+  <circle cx="250" cy="150" r="5" fill="red"/>
+  <text x="260" y="155" font-size="11" font-family="monospace" fill="red">min</text>
+
+  <!-- SGD path (zigzag) -->
+  <path d="M 100,80 L 120,100 L 140,90 L 160,110 L 180,105 L 200,120 L 220,125 L 240,135 L 245,145"
+        fill="none" stroke="steelblue" stroke-width="2"/>
+  <text x="90" y="75" font-size="11" font-family="monospace" fill="steelblue">SGD</text>
+
+  <!-- Momentum path (smoother) -->
+  <path d="M 100,200 L 130,185 L 165,172 L 200,162 L 235,153"
+        fill="none" stroke="green" stroke-width="2"/>
+  <text x="70" y="205" font-size="11" font-family="monospace" fill="green">Momentum</text>
+
+  <!-- Adam path (direct) -->
+  <path d="M 400,100 L 360,110 L 320,125 L 280,138 L 255,148"
+        fill="none" stroke="orange" stroke-width="2.5"/>
+  <text x="380" y="95" font-size="11" font-family="monospace" fill="orange">Adam</text>
+
+  <!-- Legend -->
+  <text x="180" y="280" font-size="10" font-family="monospace" fill="gray">Adam adapts per-parameter rates</text>
+</svg>

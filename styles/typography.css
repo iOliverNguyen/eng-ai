@@ -1,0 +1,191 @@
+.chapter h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+  line-height: 1.2;
+  word-break: normal;
+  hyphens: none;
+}
+
+.chapter h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+  color: var(--text);
+  line-height: 1.3;
+  word-break: normal;
+  hyphens: none;
+}
+
+.chapter h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2rem 0 0.8rem;
+  color: var(--text);
+  line-height: 1.3;
+  word-break: normal;
+  hyphens: none;
+}
+
+.chapter h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.6rem;
+  color: var(--text);
+  word-break: normal;
+  hyphens: none;
+}
+
+.chapter p {
+  margin: 1rem 0;
+  max-width: 70ch;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.chapter ul,
+.chapter ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+  max-width: 70ch;
+}
+
+.chapter li {
+  margin: 0.5rem 0;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.chapter blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--accent);
+  background: var(--code-bg);
+  font-style: italic;
+}
+
+.chapter code {
+  background: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--text);
+}
+
+.chapter pre {
+  background: var(--code-bg);
+  padding: 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+}
+
+.chapter pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.chapter a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.chapter a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Ensure links in italic text also use accent color */
+.chapter i a,
+.chapter em a {
+  color: var(--text);
+}
+
+.chapter i a:hover,
+.chapter em a:hover {
+  color: var(--accent);
+}
+
+.dark .chapter i a,
+.dark .chapter em a {
+  color: var(--text);
+}
+
+.dark .chapter i a:hover,
+.dark .chapter em a:hover {
+  color: var(--accent);
+}
+
+.dark .chapter a {
+  color: var(--accent);
+}
+
+.chapter hr {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* Hide hr before headers */
+.chapter hr:has(+ h1),
+.chapter hr:has(+ h2),
+.chapter hr:has(+ h3),
+.chapter hr:has(+ h4) {
+  display: none !important;
+}
+
+.chapter table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+}
+
+.chapter th,
+.chapter td {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.chapter th {
+  background: var(--code-bg);
+  font-weight: 600;
+}
+
+/* Math rendering */
+.katex-display {
+  margin: 2rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-size: 1.1em;
+}
+
+.katex {
+  font-size: 1.05em;
+}
+
+/* Inline math in dark mode */
+.dark .katex {
+  color: var(--text);
+}
+
+/* References section (typically at end of chapters) */
+.chapter h2:has(+ p a[href^="http"]) {
+  border-top: 2px solid var(--border);
+  padding-top: 2rem;
+  margin-top: 3rem;
+}
+
+/* Remove border-top when References h2 is preceded by hr */
+.chapter hr + h2[id*="references"] {
+  /*border-top: none !important;*/
+}
